@@ -1,0 +1,21 @@
+---
+import Layout from './Layout.astro';
+import SiteHeader from '../components/SiteHeader.astro';
+import SiteFooter from '../components/SiteFooter.astro';
+interface Props { title: string; description: string; eyebrow?: string; }
+const { title, description, eyebrow = 'AUTOMAÇÃO E MODERNIZAÇÃO DO FATURAMENTO' } = Astro.props;
+---
+<Layout title={`${title} · Diário Oficial`} description={description}>
+  <SiteHeader />
+  <main id="conteudo">
+    <section class="page-hero">
+      <div class="shell narrow">
+        <p class="eyebrow">{eyebrow}</p>
+        <h1>{title}</h1>
+        <p class="lede">{description}</p>
+      </div>
+    </section>
+    <slot />
+  </main>
+  <SiteFooter />
+</Layout>

@@ -1,30 +1,110 @@
 ---
 import Layout from '../layouts/Layout.astro';
-import Hero3D from '../components/Hero3D.astro';
-import SideNav from '../components/SideNav.astro';
-import About from '../components/About.astro';
-import Services from '../components/Services.astro';
-import Projects from '../components/Projects.astro';
-import Testimonial from '../components/Testimonial.astro';
-import Footer from '../components/Footer.astro';
+import SiteHeader from '../components/SiteHeader.astro';
+import SiteFooter from '../components/SiteFooter.astro';
+import Flow from '../components/Flow.astro';
+import { roadmap, siteMeta } from '../data/content';
 ---
+<Layout>
+  <SiteHeader />
+  <main id="conteudo">
+    <section class="hero home-hero">
+      <div class="shell hero-grid">
+        <div>
+          <p class="eyebrow">MODERNIZAÇÃO DO DIÁRIO OFICIAL</p>
+          <h1 class="display">Um novo capítulo<br />para o faturamento.</h1>
+          <p class="lede">Da medição manual a um processo digital, automatizado e rastreável.</p>
+          <p class="supporting">Automação e modernização do faturamento do Diário Oficial, com a tecnologia do Projeto Inteligência Editorial.</p>
+          <div class="actions">
+            <a class="button" href="/apresentacao/">Iniciar apresentação</a>
+            <span class="meta-note">8 cenas · roteiro de 5 min</span>
+          </div>
+        </div>
+        <div class="hero-diagram" aria-label="Fluxo proposto da edição ao faturamento">
+          <p class="diagram-kicker">UMA CONSTRUÇÃO CONJUNTA · GERDO + GERINF</p>
+          <div class="diagram-stage"><span>01 · Entrada</span><strong>Edição digital</strong><small>PDF</small></div>
+          <div class="diagram-arrow">↓</div>
+          <div class="diagram-stage accent"><span>02 · Motor</span><strong>Automação</strong><small>Identificar · Medir · Atribuir</small></div>
+          <div class="diagram-arrow">↓</div>
+          <div class="diagram-stage"><span>03 · Saída</span><strong>Dados estruturados</strong><small>Medição + responsabilidade financeira</small></div>
+        </div>
+      </div>
+      <div class="shell hero-foot"><span>01 / DO PROCESSO À TRANSFORMAÇÃO</span><a href="/faturamento/">Explore o projeto →</a><span>SETEMBRO · 2026</span></div>
+    </section>
 
-<Layout 
-  title="EGBA · Governo da Bahia — Inovação & Design System"
-  description="Apresentação institucional e portfólio com foco em Design Systems, produtos digitais governamentais escaláveis e tecnologia moderna."
->
-  <!-- Floating Side Navigation -->
-  <SideNav />
+    <section class="section">
+      <div class="shell">
+        <p class="eyebrow">O PONTO DE PARTIDA</p>
+        <div class="section-heading"><h2>A edição já é digital.<br />A medição ainda passa pelo papel.</h2><a href="/faturamento/">Entenda o processo atual →</a></div>
+        <div class="grid grid-3">
+          <article class="card numbered"><span>01</span><h3>Tempo concentrado</h3><p>A medição precisa ser concluída em uma janela de poucas horas.</p></article>
+          <article class="card numbered"><span>02</span><h3>Erros e retrabalho</h3><p>Medição, lançamento ou atribuição incorretos podem exigir correções posteriores.</p></article>
+          <article class="card numbered"><span>03</span><h3>Conhecimento concentrado</h3><p>A rotina depende de experiência prática e exige tempo de treinamento e substituição.</p></article>
+        </div>
+      </div>
+    </section>
 
-  <!-- 3D Hero Section -->
-  <Hero3D />
+    <section class="section section-dark">
+      <div class="shell">
+        <p class="eyebrow">A TRANSFORMAÇÃO</p>
+        <div class="section-heading"><h2>Automatizar a rotina.<br />Valorizar o controle.</h2><p>Deixar de depender da medição humana para faturar e concentrar a atuação das equipes nas exceções.</p></div>
+        <div class="compare">
+          <article class="compare-panel"><span>HOJE</span><h3>Pessoas executam cada etapa.</h3><Flow compact items={['Edição digital','Impressão e medição manual','Lançamento e conferência','Dados para faturamento']} /><p>O volume de trabalho cresce com o volume de publicações.</p></article>
+          <article class="compare-panel compare-accent"><span>FLUXO PROPOSTO</span><h3>O sistema processa. Pessoas supervisionam.</h3><Flow compact items={['Edição digital','Identificação e medição automática','Responsabilidade financeira e validação','Dados para faturamento']} /><p>As equipes concentram a atuação nas inconsistências e exceções.</p></article>
+        </div>
+        <div class="section-link"><a href="/transformacao/">Como acontece a transição →</a></div>
+      </div>
+    </section>
 
-  <!-- Main Content Flow -->
-  <main id="main-content" class="relative z-20 bg-white">
-    <About />
-    <Services />
-    <Projects />
-    <Testimonial />
-    <Footer />
+    <section class="section">
+      <div class="shell status-grid">
+        <div>
+          <p class="eyebrow">ONDE ESTAMOS</p>
+          <h2>A automação<br />está em construção.</h2>
+          <p class="lede-small">O núcleo principal reúne leitura da edição, identificação das publicações, medição e atribuição de responsabilidade financeira.</p>
+          <p>Testes e homologação preparam o caminho para a implantação no faturamento.</p>
+          <a href="/automacao/">Conheça a automação →</a>
+        </div>
+        <aside class="metric-panel">
+          <span>ESTÁGIO DO NÚCLEO PRINCIPAL</span>
+          <strong>70–80%</strong>
+          <p>Estimativa interna de desenvolvimento</p>
+          <small>Núcleo principal em desenvolvimento e testes. Não representa percentual de implantação nem de homologação concluída.</small>
+          <small>REFERÊNCIA · {siteMeta.referenceDate.toUpperCase()}</small>
+        </aside>
+      </div>
+    </section>
+
+    <section class="section section-muted">
+      <div class="shell">
+        <p class="eyebrow">OS PRÓXIMOS CAPÍTULOS</p>
+        <div class="section-heading"><h2>Uma evolução com etapas claras.</h2><a href="/cronograma/">Ver cronograma →</a></div>
+        <div class="roadmap-grid">
+          {roadmap.slice(1,5).map((item) => <article class="roadmap-card"><div><span>{item.phase}</span><em class={`status status-${item.status}`}>{item.status.replace('-', ' ')}</em></div><h3>{item.title}</h3><p>{item.description}</p></article>)}
+        </div>
+        <p class="caveat">A implantação depende da homologação. Datas dos próximos marcos ainda não estão definidas na documentação.</p>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="shell">
+        <p class="eyebrow">APROFUNDE A CONVERSA</p>
+        <h2>O projeto, por inteiro.</h2>
+        <p class="lede-small">Consulte a transformação do processo, as responsabilidades e a evolução planejada.</p>
+        <div class="link-grid">
+          <a href="/faturamento/"><span>01</span>Faturamento atual</a><a href="/transformacao/"><span>02</span>Transformação</a><a href="/automacao/"><span>03</span>Automação</a><a href="/transparencia/"><span>04</span>Transparência</a><a href="/cronograma/"><span>05</span>Cronograma</a><a href="/equipe/"><span>06</span>Equipe</a><a href="/ficha-tecnica/"><span>07</span>Ficha técnica</a>
+        </div>
+      </div>
+    </section>
+
+    <section class="section final-cta">
+      <div class="shell narrow">
+        <p class="eyebrow">O APOIO QUE MOVE O PRÓXIMO PASSO</p>
+        <h2>Da automação à<br />capacidade operacional.</h2>
+        <p class="lede">Apoio institucional para implantar e ampliar a modernização do faturamento do Diário Oficial.</p>
+        <a class="button button-light" href="/apresentacao/">Apresentar o projeto</a>
+      </div>
+    </section>
   </main>
+  <SiteFooter />
 </Layout>

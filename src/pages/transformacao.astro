@@ -1,0 +1,8 @@
+---
+import ConsultationLayout from '../layouts/ConsultationLayout.astro';
+import Flow from '../components/Flow.astro';
+---
+<ConsultationLayout title="Da execução manual à supervisão por exceção" description="Automatizar a tarefa mecânica para deslocar trabalho humano para controle, homologação e decisão.">
+  <section class="section"><div class="shell"><div class="compare"><article class="compare-panel"><span>ATUAL</span><h2>Pessoas executam o fluxo regular.</h2><Flow compact items={['Edição digital','Impressão','Medição humana','Lançamento','Conferência','Faturamento']} /><p>O volume operacional cresce junto com o volume de publicações.</p></article><article class="compare-panel compare-accent"><span>FUTURO OPERACIONAL</span><h2>O sistema executa. Pessoas supervisionam.</h2><Flow compact items={['Edição digital','Processamento','Medição automática','Responsabilização','Validação','Faturamento']} /><p>As equipes concentram atenção nas inconsistências e exceções.</p></article></div></div></section>
+  <section class="section section-muted"><div class="shell"><p class="eyebrow">A TRANSIÇÃO</p><div class="grid grid-3"><article class="card"><span class="card-index">01</span><h3>Automação</h3><p>O motor produz medição e responsabilização financeira de forma reproduzível.</p></article><article class="card"><span class="card-index">02</span><h3>Validação paralela</h3><p>Testes e homologação comparam o resultado automatizado com casos conhecidos e exceções reais.</p></article><article class="card"><span class="card-index">03</span><h3>Implantação controlada</h3><p>A capacidade homologada passa a integrar o processo operacional de faturamento.</p></article></div></div></section>
+</ConsultationLayout>

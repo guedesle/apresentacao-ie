@@ -1,0 +1,13 @@
+---
+import PitchLayout from '../../layouts/PitchLayout.astro';
+import Flow from '../../components/Flow.astro';
+import { currentFlow } from '../../data/content';
+---
+<PitchLayout index={1} title="Como faturamos hoje">
+  <div>
+    <p class="eyebrow">COMO FATURAMOS HOJE</p>
+    <h1>Digital na produção.<br />Manual na medição.</h1>
+    <Flow items={currentFlow} />
+    <p class="pitch-closing">Apesar de o Diário Oficial ser produzido digitalmente, uma etapa essencial do faturamento ainda depende de um processo físico e manual.</p>
+  </div>
+</PitchLayout>

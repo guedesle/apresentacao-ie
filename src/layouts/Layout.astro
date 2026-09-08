@@ -1,32 +1,36 @@
 ---
+import { ClientRouter } from 'astro:transitions';
 import '../styles/global.css';
+import { siteMeta } from '../data/content';
 
 interface Props {
   title?: string;
   description?: string;
+  className?: string;
 }
 
 const {
-  title = "Governo da Bahia — Apresentação & Portfólio de Design",
-  description = "Apresentação e portfólio institucional com design system, produtos escaláveis e tecnologia."
+  title = siteMeta.title,
+  description = siteMeta.description,
+  className = '',
 } = Astro.props;
 ---
 
-<!DOCTYPE html>
-<html lang="pt-BR" class="scroll-smooth">
-<head>
-  <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
-  <link rel="icon" type="image/png" href="/bagov.png" />
-  <title>{title}</title>
-  <meta name="description" content={description} />
-
-  <!-- Google Fonts: Geist & Geist Mono -->
-  <link rel="preconnect" href="https://fonts.googleapis.com" />
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=Geist+Mono:wght@300;400;500;600;700&family=Geist:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet" />
-</head>
-<body class="bg-white text-slate-900 antialiased selection:bg-bahia-cyan-100 selection:text-bahia-blue-700 min-h-screen">
-  <slot />
-</body>
+<!doctype html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
+    <meta name="description" content={description} />
+    <meta name="robots" content="noindex, nofollow, noarchive" />
+    <meta name="referrer" content="strict-origin-when-cross-origin" />
+    <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self' 'unsafe-inline'; style-src 'self' 'unsafe-inline'; img-src 'self' data:; font-src 'self'; connect-src 'self'; object-src 'none'; base-uri 'self'; form-action 'self'; upgrade-insecure-requests" />
+    <link rel="icon" href="/favicon.svg" type="image/svg+xml" />
+    <title>{title}</title>
+    <ClientRouter />
+  </head>
+  <body class={className}>
+    <a class="skip-link" href="#conteudo">Ir para o conteúdo</a>
+    <slot />
+  </body>
 </html>

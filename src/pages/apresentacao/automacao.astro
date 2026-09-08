@@ -1,0 +1,13 @@
+---
+import PitchLayout from '../../layouts/PitchLayout.astro';
+import Flow from '../../components/Flow.astro';
+import { automatedFlow } from '../../data/content';
+---
+<PitchLayout index={4} title="A automação em construção">
+  <div>
+    <p class="eyebrow">A AUTOMAÇÃO EM CONSTRUÇÃO</p>
+    <div class="pitch-title-metric"><h1>A capacidade tecnológica já está em desenvolvimento avançado.</h1><div><strong>70–80%</strong><span>estimativa interna do núcleo principal</span></div></div>
+    <Flow items={automatedFlow} />
+    <p class="pitch-closing">O motor não é o produto final. É o componente que permite automatizar o processo necessário ao faturamento.</p>
+  </div>
+</PitchLayout>

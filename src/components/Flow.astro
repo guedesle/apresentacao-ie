@@ -1,0 +1,15 @@
+---
+interface Props {
+  items: string[] | readonly string[];
+  compact?: boolean;
+}
+const { items, compact = false } = Astro.props;
+---
+<ol class:list={['flow', { 'flow-compact': compact }]}>
+  {items.map((item, index) => (
+    <li class="flow-step">
+      <span>{String(index + 1).padStart(2, '0')}</span>
+      <strong>{item}</strong>
+    </li>
+  ))}
+</ol>
