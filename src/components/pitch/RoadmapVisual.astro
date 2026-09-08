@@ -1,0 +1,19 @@
+---
+import { roadmap } from '../../data/content';
+const statusSymbol = { concluido:'✓', 'em-execucao':'●', proximo:'◐', futuro:'○' } as const;
+---
+<figure class="exec-visual roadmap-visual" aria-labelledby="roadmap-caption" data-animated-visual>
+  <div class="roadmap-line" aria-hidden="true"><i></i></div>
+  <ol class="roadmap-sequence">
+    {roadmap.map((item, index) => (
+      <li class={`roadmap-phase phase-${item.status}`} data-animate style={`--delay:${index * 120}ms`}>
+        <span class="roadmap-symbol">{statusSymbol[item.status]}</span>
+        <small>{item.phase}</small>
+        <strong>{item.title}</strong>
+        <p>{item.description}</p>
+      </li>
+    ))}
+  </ol>
+  <div class="roadmap-next" data-animate style="--delay:820ms"><span>→</span><strong>Próximo marco: homologação progressiva</strong></div>
+  <figcaption id="roadmap-caption" class="sr-only">Roadmap da automação do faturamento: concepção concluída, motor e testes em execução, implantação como próximo marco e escala e transparência como etapas futuras.</figcaption>
+</figure>

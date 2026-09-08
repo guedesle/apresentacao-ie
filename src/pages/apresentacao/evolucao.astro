@@ -1,10 +1,12 @@
 ---
 import PitchLayout from '../../layouts/PitchLayout.astro';
-import Flow from '../../components/Flow.astro';
+import FutureTransparencyVisual from '../../components/pitch/FutureTransparencyVisual.astro';
 ---
-<PitchLayout index={6} title="Transparência e evolução">
-  <div class="pitch-grid">
-    <div><p class="eyebrow">TRANSPARÊNCIA COMO CONSEQUÊNCIA</p><h1>Do dado estruturado<br />à evidência verificável.</h1><Flow compact items={['Automação do faturamento','Dados estruturados','Rastreabilidade','Evidência da publicação','Transparência para o cliente']} /></div>
-    <aside class="future-card pitch-future"><span>SEGUNDA ETAPA · EVOLUÇÃO FUTURA</span><h2>Plataforma de consulta e transparência</h2><p>Publicação · edição · dimensão · evidência · preço · histórico · extrato.</p><small>Não integra a implantação operacional inicial.</small></aside>
+<PitchLayout index={9} title="Transparência futura ao cliente">
+  <div class="pitch-refined-scene">
+    <p class="eyebrow">EVOLUÇÃO FUTURA</p>
+    <h1>Dados estruturados hoje.<br />Transparência amanhã.</h1>
+    <p class="pitch-lede pitch-lede-short">A rastreabilidade criada no faturamento prepara uma etapa posterior de consulta, conferência e histórico para o cliente.</p>
+    <FutureTransparencyVisual />
   </div>
 </PitchLayout>

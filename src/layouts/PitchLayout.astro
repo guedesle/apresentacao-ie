@@ -1,6 +1,7 @@
 ---
 import Layout from './Layout.astro';
 import '../styles/pitch.css';
+import '../styles/pitch-visuals.css';
 import { pitchRoutes } from '../data/content';
 interface Props { index: number; title: string; }
 const { index, title } = Astro.props;
@@ -35,6 +36,24 @@ const next = index < pitchRoutes.length - 1 ? pitchRoutes[index + 1] : null;
           try { if (!document.fullscreenElement) await document.documentElement.requestFullscreen(); else await document.exitFullscreen(); } catch (_) {}
         }
       });
+    }
+
+    const reduced = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+    const visuals = document.querySelectorAll('[data-animated-visual]');
+    if (reduced) {
+      visuals.forEach((visual) => visual.classList.add('is-visible'));
+    } else if ('IntersectionObserver' in window) {
+      const observer = new IntersectionObserver((entries) => {
+        entries.forEach((entry) => {
+          if (entry.isIntersecting) {
+            entry.target.classList.add('is-visible');
+            observer.unobserve(entry.target);
+          }
+        });
+      }, { threshold: 0.28 });
+      visuals.forEach((visual) => observer.observe(visual));
+    } else {
+      visuals.forEach((visual) => visual.classList.add('is-visible'));
     }
   </script>
 </Layout>
