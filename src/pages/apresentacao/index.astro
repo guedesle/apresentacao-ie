@@ -1,14 +1,16 @@
 ---
 import PitchLayout from '../../layouts/PitchLayout.astro';
+import HeroAutomationVisual from '../../components/pitch/HeroAutomationVisual.astro';
 ---
 <PitchLayout index={0} title="Automação e Modernização do Faturamento do Diário Oficial">
-  <div class="pitch-grid pitch-opening">
-    <div>
+  <div class="pitch-hero-refined">
+    <div class="pitch-hero-copy">
       <p class="eyebrow">PROJETO INTELIGÊNCIA EDITORIAL · GERDO + GERINF</p>
       <h1>Automação e Modernização do Faturamento do Diário Oficial</h1>
       <p class="pitch-lede">Do processo manual para um faturamento digital, automatizado, rastreável e escalável.</p>
+      <p class="pitch-support">Tecnologia como meio. Modernização operacional como resultado.</p>
       <a class="button" href="/apresentacao/faturamento-atual/">Iniciar apresentação →</a>
     </div>
-    <aside class="pitch-callout"><span>OBJETO DE NEGÓCIO</span><strong>Faturamento</strong><p>Tecnologia como meio. Modernização operacional como resultado.</p></aside>
+    <HeroAutomationVisual />
   </div>
 </PitchLayout>
