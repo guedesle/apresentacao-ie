@@ -1,0 +1,12 @@
+---
+import PitchLayout from '../../layouts/PitchLayout.astro';
+import Flow from '../../components/Flow.astro';
+---
+<PitchLayout index={3} title="Antes e depois">
+  <div>
+    <p class="eyebrow">ANTES × DEPOIS</p>
+    <h1>De executar a medição<br />a supervisionar exceções.</h1>
+    <div class="compare pitch-compare"><article class="compare-panel"><span>ANTES</span><h3>Pessoas executam.</h3><Flow compact items={['Edição digital','Impressão','Medição humana','Lançamento','Faturamento']} /></article><article class="compare-panel compare-accent"><span>DEPOIS</span><h3>O sistema produz. Pessoas validam.</h3><Flow compact items={['Edição digital','Processamento','Medição automática','Responsabilização','Validação','Faturamento']} /></article></div>
+    <p class="pitch-closing">Não queremos apenas medir mais rápido. Queremos deixar de depender da medição humana para faturar.</p>
+  </div>
+</PitchLayout>

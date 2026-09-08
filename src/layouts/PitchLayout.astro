@@ -1,0 +1,39 @@
+---
+import Layout from './Layout.astro';
+import { pitchRoutes } from '../data/content';
+interface Props { index: number; title: string; }
+const { index, title } = Astro.props;
+const previous = index > 0 ? pitchRoutes[index - 1] : null;
+const next = index < pitchRoutes.length - 1 ? pitchRoutes[index + 1] : null;
+---
+<Layout title={`${title} · Apresentação`} className="pitch-body">
+  <main id="conteudo" class="pitch-shell" data-pitch-index={index} data-pitch-total={pitchRoutes.length} data-prev={previous ?? ''} data-next={next ?? ''}>
+    <header class="pitch-header">
+      <a class="pitch-brand" href="/">egba. <span>Diário Oficial</span></a>
+      <div class="pitch-progress"><span style={`width:${((index + 1) / pitchRoutes.length) * 100}%`}></span></div>
+      <div class="pitch-count">{String(index + 1).padStart(2,'0')} / {String(pitchRoutes.length).padStart(2,'0')}</div>
+    </header>
+    <section class="pitch-scene"><slot /></section>
+    <footer class="pitch-footer">
+      <span>← → navegar · espaço avançar · F tela cheia</span>
+      <nav>{previous && <a href={previous}>← anterior</a>}{next && <a href={next}>próxima →</a>}</nav>
+    </footer>
+  </main>
+  <script is:inline>
+    const root = document.querySelector('[data-pitch-index]');
+    if (root) {
+      const go = (url) => { if (url) window.location.href = url; };
+      document.addEventListener('keydown', async (event) => {
+        const key = event.key;
+        if (['ArrowRight','PageDown',' '].includes(key)) { event.preventDefault(); go(root.dataset.next); }
+        if (['ArrowLeft','PageUp'].includes(key)) { event.preventDefault(); go(root.dataset.prev); }
+        if (key === 'Home') { event.preventDefault(); go('/apresentacao/'); }
+        if (key === 'End') { event.preventDefault(); go('/apresentacao/decisao/'); }
+        if (key.toLowerCase() === 'f') {
+          event.preventDefault();
+          try { if (!document.fullscreenElement) await document.documentElement.requestFullscreen(); else await document.exitFullscreen(); } catch (_) {}
+        }
+      });
+    }
+  </script>
+</Layout>
