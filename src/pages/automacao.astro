@@ -1,0 +1,10 @@
+---
+import ConsultationLayout from '../layouts/ConsultationLayout.astro';
+import Flow from '../components/Flow.astro';
+import { automatedFlow } from '../data/content';
+---
+<ConsultationLayout title="A automação que sustenta o novo faturamento" description="O motor é o meio tecnológico para transformar a edição digital em dados estruturados de medição e responsabilidade financeira.">
+  <section class="section"><div class="shell"><p class="eyebrow">ARQUITETURA FUNCIONAL</p><Flow items={automatedFlow} /></div></section>
+  <section class="section section-dark"><div class="shell status-grid"><div><p class="eyebrow">ESTÁGIO ATUAL</p><h2>Desenvolvimento avançado<br />e testes em curso.</h2><p>Leitura da edição, identificação estrutural, reconhecimento das publicações, medição e responsabilização compõem o núcleo principal.</p></div><aside class="metric-panel metric-panel-dark"><span>ESTIMATIVA INTERNA</span><strong>70–80%</strong><p>do desenvolvimento do núcleo principal</p><small>Não representa percentual de implantação nem de homologação concluída.</small></aside></div></section>
+  <section class="section"><div class="shell"><p class="eyebrow">ANTES DE IMPLANTAR</p><div class="grid grid-3"><article class="card"><h3>Testes</h3><p>Casos reais, negativos e adversariais verificam regras e exceções do processo editorial.</p></article><article class="card"><h3>Homologação</h3><p>Especialistas do processo validam o comportamento necessário para uso operacional.</p></article><article class="card"><h3>Rastreabilidade</h3><p>O resultado deve manter vínculo com a publicação e a evidência que sustentam o dado utilizado no faturamento.</p></article></div></div></section>
+</ConsultationLayout>

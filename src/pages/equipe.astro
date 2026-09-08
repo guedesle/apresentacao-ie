@@ -1,0 +1,7 @@
+---
+import ConsultationLayout from '../layouts/ConsultationLayout.astro';
+import { teams } from '../data/content';
+---
+<ConsultationLayout title="Equipe responsável" description="A modernização é construída em conjunto pela Gerência do Diário Oficial e pela Gerência de Informática, com desenvolvimento técnico e homologação operacional claramente separados.">
+  <section class="section"><div class="shell team-stack">{teams.map((group, index) => <article class="team-group"><div><span>{String(index + 1).padStart(2,'0')}</span><small>{group.label}</small></div><div><h2>{group.title}</h2><ul>{group.members.map((member) => <li>{member}</li>)}</ul></div></article>)}</div></section>
+</ConsultationLayout>

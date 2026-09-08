@@ -1,0 +1,7 @@
+---
+import ConsultationLayout from '../layouts/ConsultationLayout.astro';
+import { roadmap } from '../data/content';
+---
+<ConsultationLayout title="Cronograma da transformação" description="A evolução separa construção tecnológica, homologação, implantação, escala e transparência — sem antecipar marcos ainda não definidos.">
+  <section class="section"><div class="shell"><div class="timeline">{roadmap.map((item) => <article class="timeline-item"><div class="timeline-number">{item.phase}</div><div><em class={`status status-${item.status}`}>{item.status.replace('-', ' ')}</em><h2>{item.title}</h2><p>{item.description}</p></div></article>)}</div><p class="caveat">A implantação depende da homologação. Datas dos próximos marcos ainda não estão definidas na documentação de referência.</p></div></section>
+</ConsultationLayout>

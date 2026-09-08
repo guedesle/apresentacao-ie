@@ -1,0 +1,9 @@
+---
+import ConsultationLayout from '../layouts/ConsultationLayout.astro';
+import { facts, claims, siteMeta } from '../data/content';
+const labels = { 'confirmed':'confirmado', 'internal-estimate':'estimativa interna', 'expected':'impacto esperado', 'future-target':'etapa futura' } as const;
+---
+<ConsultationLayout title="Ficha técnica e fontes" description="Contexto, escopo e classificação das principais afirmações apresentadas no site.">
+  <section class="section"><div class="shell"><dl class="facts">{facts.map(([key,value]) => <div><dt>{key}</dt><dd>{value}</dd></div>)}</dl></div></section>
+  <section class="section section-muted"><div class="shell"><p class="eyebrow">CLASSIFICAÇÃO DE EVIDÊNCIA</p><div class="claim-stack">{claims.map((claim) => <article class="claim"><div><em class={`evidence evidence-${claim.evidenceLevel}`}>{labels[claim.evidenceLevel]}</em><small>{claim.referenceDate}</small></div><p>{claim.statement}</p><small>Fonte: {claim.source}</small></article>)}</div><p class="caveat">Informações de referência: {siteMeta.referenceDate}. O percentual de 70%–80% é estimativa interna de desenvolvimento do núcleo e não deve ser interpretado como implantação ou homologação concluída.</p></div></section>
+</ConsultationLayout>

@@ -1,0 +1,10 @@
+---
+import ConsultationLayout from '../layouts/ConsultationLayout.astro';
+import Flow from '../components/Flow.astro';
+import { currentFlow } from '../data/content';
+---
+<ConsultationLayout title="O faturamento do Diário Oficial hoje" description="A produção é digital, mas uma etapa essencial para transformar publicações em dados de faturamento ainda depende de medição e lançamento manuais.">
+  <section class="section"><div class="shell"><p class="eyebrow">FLUXO ATUAL</p><Flow items={currentFlow} /></div></section>
+  <section class="section section-muted"><div class="shell"><p class="eyebrow">ONDE O PROCESSO PRESSIONA A OPERAÇÃO</p><div class="grid grid-3"><article class="card"><h2>Janela curta</h2><p>A medição precisa ser concluída em poucas horas para alimentar as etapas seguintes do faturamento.</p></article><article class="card"><h2>Variabilidade</h2><p>Erros de medição, lançamento ou atribuição podem gerar retrabalho, correções e reprocessamentos.</p></article><article class="card"><h2>Dependência</h2><p>A execução exige conhecimento prático acumulado e torna treinamento e substituição mais difíceis.</p></article></div></div></section>
+  <section class="section"><div class="shell narrow"><p class="eyebrow">POR QUE MUDAR</p><h2>O objetivo não é digitalizar o papel. É retirar a dependência do processo físico da cadeia de faturamento.</h2><p class="lede-small">A modernização desloca o esforço humano da medição repetitiva para o tratamento de exceções, controle e validação.</p><a class="text-link" href="/transformacao/">Ver a transformação proposta →</a></div></section>
+</ConsultationLayout>
