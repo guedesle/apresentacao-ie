@@ -37,10 +37,13 @@ export const consultationNav = [
 export const pitchRoutes = [
   '/apresentacao/',
   '/apresentacao/faturamento-atual/',
-  '/apresentacao/por-que-modernizar/',
   '/apresentacao/antes-depois/',
+  '/apresentacao/analise-deterministica/',
   '/apresentacao/automacao/',
   '/apresentacao/impactos/',
+  '/apresentacao/rastreabilidade/',
+  '/apresentacao/roadmap/',
+  '/apresentacao/governanca/',
   '/apresentacao/evolucao/',
   '/apresentacao/decisao/',
 ] as const;
@@ -65,12 +68,12 @@ export const automatedFlow = [
 ];
 
 export const roadmap: RoadmapItem[] = [
-  { phase: '01', title: 'Concepção e requisitos', description: 'Mapeamento do processo, regras de medição, responsabilização e critérios de aceite.', status: 'concluido' },
-  { phase: '02', title: 'Motor de automação', description: 'Leitura da edição, identificação das publicações, medição e atribuição.', status: 'em-execucao' },
-  { phase: '03', title: 'Testes e homologação', description: 'Validação técnica e operacional com casos reais, exceções e rastreabilidade.', status: 'em-execucao' },
-  { phase: '04', title: 'Implantação no faturamento', description: 'Entrada controlada do fluxo automatizado no processo operacional.', status: 'proximo' },
-  { phase: '05', title: 'Escala operacional', description: 'Ampliação do uso e redução progressiva da dependência de execução manual.', status: 'futuro' },
-  { phase: '06', title: 'Transparência ao cliente', description: 'Consulta da publicação, medição, evidência e valor como evolução posterior.', status: 'futuro' },
+  { phase: '01', title: 'Concepção', description: 'Escopo, regras de medição, responsabilização e critérios definidos.', status: 'concluido' },
+  { phase: '02', title: 'Automação do núcleo', description: 'Leitura, identificação, medição e responsabilização em consolidação.', status: 'em-execucao' },
+  { phase: '03', title: 'Homologação', description: 'Validação técnica e operacional com áreas envolvidas e casos reais.', status: 'proximo' },
+  { phase: '04', title: 'Implantação assistida', description: 'Entrada controlada do fluxo automatizado no processo operacional.', status: 'futuro' },
+  { phase: '05', title: 'Escala operacional', description: 'Ampliação do uso e redução progressiva da execução manual.', status: 'futuro' },
+  { phase: '06', title: 'Transparência ao cliente', description: 'Consulta de publicação, medição, evidência e histórico como evolução posterior.', status: 'futuro' },
 ];
 
 export const teams = [
@@ -99,9 +102,9 @@ export const facts = [
   ['Natureza', 'Automação de processo / transformação digital'],
   ['Processo principal', 'Faturamento de publicações'],
   ['Capacidade automatizada', 'Medição e responsabilização financeira'],
-  ['Situação', 'Desenvolvimento e homologação'],
+  ['Situação', 'Desenvolvimento e preparação para homologação progressiva'],
   ['Estágio do núcleo', 'Aproximadamente 70%–80% — estimativa interna'],
-  ['Próximo marco', 'Implantação operacional após homologação'],
+  ['Próximo marco', 'Homologação progressiva'],
   ['Evolução futura', 'Plataforma de transparência para clientes'],
 ] as const;
 
@@ -149,4 +152,4 @@ for (const item of roadmap) {
   if (!item.phase || !item.title || !item.description || !statuses.has(item.status)) throw new Error(`Roadmap semanticamente inválido: ${item.title}`);
 }
 
-if (pitchRoutes.length !== 8) throw new Error('O modo pitch deve possuir exatamente oito cenas.');
+if (pitchRoutes.length !== 11) throw new Error('O modo pitch deve possuir exatamente onze cenas.');
