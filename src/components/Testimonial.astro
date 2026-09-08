@@ -1,0 +1,31 @@
+---
+import { Quote } from 'lucide-astro';
+---
+
+<section id="testimonial" class="bg-slate-50/60 border-t border-slate-200/80 px-6 sm:px-8 py-24">
+  <div class="max-w-4xl mx-auto text-center">
+    <div class="mb-10">
+      <div class="w-12 h-12 rounded-full bg-bahia-cyan-50 border border-bahia-cyan-100 flex items-center justify-center mx-auto mb-8 shadow-sm">
+        <Quote class="w-6 h-6 text-bahia-cyan" />
+      </div>
+
+      <blockquote class="text-2xl md:text-3xl font-medium text-slate-800 leading-relaxed mb-10 tracking-tight font-sans">
+        "Capacidade ímpar de traduzir complexidade em experiências fluidas e produtos de alto padrão visual. A atenção minuciosa aos detalhes do design system e a visão estratégica entregam resultados consistentes e elevam o nível de qualquer equipe e projeto."
+      </blockquote>
+
+      <div class="flex items-center justify-center gap-4">
+        <div class="w-14 h-14 rounded-full bg-slate-200 overflow-hidden ring-2 ring-bahia-cyan/30 ring-offset-2">
+          <img 
+            alt="Victor Gonçalves" 
+            class="w-full h-full object-cover" 
+            src="/assets/images/testimonial-avatar.jpg"
+          />
+        </div>
+        <div class="text-left">
+          <div class="font-bold text-slate-900 text-base">Victor Gonçalves</div>
+          <div class="text-slate-500 text-xs font-geist-mono">Chief Digital Officer · Verity</div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>

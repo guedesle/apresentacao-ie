@@ -1,0 +1,40 @@
+---
+// Header.astro
+---
+
+<header class="flex justify-between items-center pointer-events-auto w-full max-w-[1400px] mx-auto z-20 py-4 px-2">
+  <a href="#" class="flex items-center gap-4 group">
+    <img 
+      src="/bagov.png" 
+      alt="Governo da Bahia" 
+      class="h-7 w-auto object-contain transition-transform group-hover:scale-105 duration-300"
+    />
+    <div class="h-5 w-px bg-slate-200 hidden sm:block"></div>
+    <span class="text-sm font-bold tracking-tight text-slate-900 group-hover:text-bahia-cyan transition-colors font-geist-mono">
+      EGBA <span class="text-bahia-red">·</span> Inovação
+    </span>
+  </a>
+
+  <nav class="hidden sm:flex items-center gap-8 text-xs font-semibold text-slate-500 uppercase tracking-wider font-geist-mono">
+    <a class="hover:text-bahia-cyan transition-colors py-1 relative after:absolute after:bottom-0 after:left-0 after:w-0 hover:after:w-full after:h-0.5 after:bg-bahia-cyan after:transition-all" href="#about">
+      Sobre
+    </a>
+    <a class="hover:text-bahia-cyan transition-colors py-1 relative after:absolute after:bottom-0 after:left-0 after:w-0 hover:after:w-full after:h-0.5 after:bg-bahia-cyan after:transition-all" href="#services">
+      Habilidades
+    </a>
+    <a class="hover:text-bahia-cyan transition-colors py-1 relative after:absolute after:bottom-0 after:left-0 after:w-0 hover:after:w-full after:h-0.5 after:bg-bahia-cyan after:transition-all" href="#work">
+      Projetos
+    </a>
+    <a class="hover:text-bahia-cyan transition-colors py-1 relative after:absolute after:bottom-0 after:left-0 after:w-0 hover:after:w-full after:h-0.5 after:bg-bahia-cyan after:transition-all" href="#testimonial">
+      Avaliação
+    </a>
+    <a 
+      class="px-3.5 py-1.5 rounded-full border border-bahia-red text-bahia-red hover:bg-bahia-red hover:text-white transition-all duration-300" 
+      href="https://api.whatsapp.com/send/?phone=5521972139499&text=Ola!+Gostaria+de+conversar+sobre+projetos&type=phone_number&app_absent=0" 
+      target="_blank" 
+      rel="noopener noreferrer"
+    >
+      Contato
+    </a>
+  </nav>
+</header>

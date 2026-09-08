@@ -1,0 +1,114 @@
+---
+import { ArrowRight, Plus } from 'lucide-astro';
+---
+
+<section id="work" class="px-6 sm:px-8 bg-white border-t border-slate-200/80 py-24">
+  <div class="mx-auto max-w-6xl">
+    <div class="mb-16">
+      <div class="flex items-center gap-3 mb-4">
+        <span class="text-xs font-bold text-bahia-blue uppercase tracking-widest font-geist-mono">
+          Trabalhos Selecionados
+        </span>
+        <div class="h-px flex-1 bg-slate-200"></div>
+      </div>
+      <h2 class="text-3xl md:text-4xl font-semibold tracking-tight text-slate-900 mb-4">
+        Projetos &amp; Estudos de Caso
+      </h2>
+      <p class="text-base md:text-lg text-slate-500 max-w-2xl font-geist-mono">
+        Soluções focadas em escalabilidade, clareza visual e experiência de alto desempenho.
+      </p>
+    </div>
+
+    <div class="space-y-16">
+      <!-- Project 1 -->
+      <div class="group grid grid-cols-1 lg:grid-cols-2 gap-10 lg:gap-16 items-center">
+        <div class="order-2 lg:order-1">
+          <div class="flex items-center gap-2 mb-4">
+            <span class="text-xs text-bahia-cyan font-geist-mono font-semibold">2026</span>
+            <div class="h-1 w-1 rounded-full bg-slate-300"></div>
+            <span class="text-xs text-slate-500 font-geist-mono font-medium">Governo &amp; Dados</span>
+          </div>
+          <h3 class="text-2xl md:text-3xl font-bold text-slate-900 mb-4 group-hover:text-bahia-blue transition-colors">
+            Portal de Serviços &amp; Dados Governamentais
+          </h3>
+          <p class="text-slate-600 mb-6 leading-relaxed font-geist-mono text-sm md:text-base">
+            Arquitetura e design de painéis analíticos com métricas em tempo real, simplificação de serviços ao cidadão e governança de dados integrados.
+          </p>
+          <div class="flex flex-wrap gap-2 mb-8">
+            <span class="px-3 py-1 text-xs bg-slate-50 text-slate-700 border border-slate-200 rounded-full font-geist-mono">Astro</span>
+            <span class="px-3 py-1 text-xs bg-slate-50 text-slate-700 border border-slate-200 rounded-full font-geist-mono">TypeScript</span>
+            <span class="px-3 py-1 text-xs bg-slate-50 text-slate-700 border border-slate-200 rounded-full font-geist-mono">Design System</span>
+            <span class="px-3 py-1 text-xs bg-slate-50 text-slate-700 border border-slate-200 rounded-full font-geist-mono">Three.js</span>
+          </div>
+          <a 
+            class="inline-flex items-center gap-2 text-sm font-semibold text-slate-900 hover:text-bahia-cyan transition-colors border-b-2 border-transparent hover:border-bahia-cyan pb-1" 
+            href="#"
+          >
+            <span>Ver estudo de caso</span>
+            <ArrowRight class="w-4 h-4 text-bahia-red transition-transform group-hover:translate-x-1" />
+          </a>
+        </div>
+
+        <div class="order-1 lg:order-2">
+          <div class="rounded-2xl overflow-hidden border border-slate-200 shadow-xl bg-slate-50 group-hover:-translate-y-2 transition-transform duration-500">
+            <img 
+              alt="Dashboard de Dados Governamentais" 
+              class="w-full h-auto object-cover opacity-90 group-hover:opacity-100 transition-opacity duration-300" 
+              src="/assets/images/project-1.jpg"
+            />
+          </div>
+        </div>
+      </div>
+
+      <!-- Project 2 -->
+      <div class="group grid grid-cols-1 lg:grid-cols-2 gap-10 lg:gap-16 items-center">
+        <div class="order-2">
+          <div class="flex items-center gap-2 mb-4">
+            <span class="text-xs text-bahia-cyan font-geist-mono font-semibold">2026</span>
+            <div class="h-1 w-1 rounded-full bg-slate-300"></div>
+            <span class="text-xs text-slate-500 font-geist-mono font-medium">Design System</span>
+          </div>
+          <h3 class="text-2xl md:text-3xl font-bold text-slate-900 mb-4 group-hover:text-bahia-blue transition-colors">
+            Sistema de Design Unificado da Bahia
+          </h3>
+          <p class="text-slate-600 mb-6 leading-relaxed font-geist-mono text-sm md:text-base">
+            Padronização de componentes de interface para todos os portais estaduais, garantindo conformidade com padrões de acessibilidade WCAG e fluidez multiplataforma.
+          </p>
+          <div class="flex flex-wrap gap-2 mb-8">
+            <span class="px-3 py-1 text-xs bg-slate-50 text-slate-700 border border-slate-200 rounded-full font-geist-mono">Figma Tokens</span>
+            <span class="px-3 py-1 text-xs bg-slate-50 text-slate-700 border border-slate-200 rounded-full font-geist-mono">Tailwind CSS</span>
+            <span class="px-3 py-1 text-xs bg-slate-50 text-slate-700 border border-slate-200 rounded-full font-geist-mono">Acessibilidade</span>
+            <span class="px-3 py-1 text-xs bg-slate-50 text-slate-700 border border-slate-200 rounded-full font-geist-mono">Web Components</span>
+          </div>
+          <a 
+            class="inline-flex items-center gap-2 text-sm font-semibold text-slate-900 hover:text-bahia-cyan transition-colors border-b-2 border-transparent hover:border-bahia-cyan pb-1" 
+            href="#"
+          >
+            <span>Ver estudo de caso</span>
+            <ArrowRight class="w-4 h-4 text-bahia-red transition-transform group-hover:translate-x-1" />
+          </a>
+        </div>
+
+        <div class="order-1">
+          <div class="rounded-2xl overflow-hidden border border-slate-200 shadow-xl bg-slate-50 group-hover:-translate-y-2 transition-transform duration-500">
+            <img 
+              alt="Sistema de Design Unificado" 
+              class="w-full h-auto object-cover opacity-90 group-hover:opacity-100 transition-opacity duration-300" 
+              src="/assets/images/project-2.jpg"
+            />
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="text-center mt-20">
+      <a 
+        class="inline-flex items-center gap-2 px-8 py-4 bg-white border border-slate-200 hover:border-bahia-cyan rounded-full text-slate-900 hover:text-bahia-cyan transition-all font-geist-mono text-sm shadow-sm hover:shadow-md" 
+        href="#about"
+      >
+        <span>Explorar todos os projetos</span>
+        <Plus class="w-4 h-4 text-bahia-red" />
+      </a>
+    </div>
+  </div>
+</section>

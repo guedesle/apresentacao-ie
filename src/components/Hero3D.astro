@@ -1,0 +1,75 @@
+---
+import Header from './Header.astro';
+---
+
+<section class="relative w-full h-screen flex flex-col justify-between p-6 sm:p-12 z-10 pointer-events-none overflow-hidden bg-gradient-to-b from-white via-slate-50/50 to-white border-b border-slate-100">
+  <!-- Three.js Canvas Container for Interactive 3D Torus Knot & Bahia Sparks -->
+  <div id="canvas-container"></div>
+
+  <!-- Header Bar -->
+  <Header />
+
+  <!-- Hero Content Bottom -->
+  <div class="flex flex-col md:flex-row justify-between items-end gap-12 pointer-events-auto w-full max-w-[1400px] mx-auto mb-4 z-10">
+    <div class="max-w-md space-y-6">
+      <div class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-bahia-cyan-50 border border-bahia-cyan-100 text-bahia-cyan text-xs font-semibold font-geist-mono">
+        <span class="w-2 h-2 rounded-full bg-bahia-cyan animate-pulse"></span>
+        Governo do Estado da Bahia
+      </div>
+      <p class="text-sm md:text-base leading-relaxed text-slate-600 font-medium">
+        Senior Product Designer &amp; Especialista em Design Systems. Criação de experiências digitais escaláveis, interfaces governamentais de alto impacto e arquitetura de componentes consistentes.
+      </p>
+      <button 
+        id="explore-btn"
+        class="group inline-flex items-center gap-3 text-xs font-bold tracking-widest uppercase border-b-2 border-slate-900 pb-1 hover:text-bahia-cyan hover:border-bahia-cyan transition-all cursor-pointer font-geist-mono"
+      >
+        <span>Explorar Apresentação</span>
+        <span class="group-hover:translate-y-1 transition-transform duration-300 text-bahia-red">↓</span>
+      </button>
+    </div>
+
+    <div class="text-right">
+      <div class="inline-block mb-3">
+        <span class="text-xs font-bold uppercase tracking-widest px-3 py-1 rounded-md bg-gradient-to-r from-bahia-cyan via-bahia-indigo to-bahia-red text-white font-geist-mono shadow-sm">
+          Design System &amp; Inovação
+        </span>
+      </div>
+      <h1 class="text-5xl md:text-7xl lg:text-8xl font-semibold tracking-tighter leading-[0.9] text-slate-950">
+        <span class="block">Product Designer</span>
+        <span class="block bg-gradient-to-r from-slate-950 via-slate-800 to-bahia-cyan bg-clip-text text-transparent">
+          &amp; Sistemas
+        </span>
+      </h1>
+      <p class="text-xl md:text-3xl text-slate-400 font-light mt-3 tracking-tight font-geist-mono">
+        Inovação e Experiência Digital
+      </p>
+    </div>
+  </div>
+</section>
+
+<script>
+  import { initHeroThree } from '../scripts/three-hero.js';
+
+  // Initialize on page load and handle Astro page transitions if present
+  let cleanup;
+  function setup() {
+    if (cleanup) cleanup();
+    cleanup = initHeroThree();
+
+    const btn = document.getElementById('explore-btn');
+    if (btn) {
+      btn.addEventListener('click', () => {
+        const target = document.getElementById('about');
+        if (target) target.scrollIntoView({ behavior: 'smooth' });
+      });
+    }
+  }
+
+  if (document.readyState === 'loading') {
+    document.addEventListener('DOMContentLoaded', setup);
+  } else {
+    setup();
+  }
+
+  document.addEventListener('astro:page-load', setup);
+</script>

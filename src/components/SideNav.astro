@@ -1,0 +1,62 @@
+---
+import { Home, Briefcase, User, Mail } from 'lucide-astro';
+---
+
+<aside class="hidden lg:block fixed left-6 top-1/2 -translate-y-1/2 z-40">
+  <div class="flex flex-col gap-3 bg-white/90 backdrop-blur-md border-slate-200/80 border rounded-full p-2.5 shadow-xl shadow-slate-200/50 items-center">
+    <a 
+      href="#" 
+      class="group grid place-items-center text-slate-400 hover:text-bahia-cyan hover:bg-bahia-cyan-50 transition relative w-10 h-10 rounded-full"
+      title="Início"
+    >
+      <Home class="w-4 h-4 transition-transform group-hover:scale-110" />
+      <span class="absolute left-14 bg-slate-900 text-white text-xs px-2.5 py-1 rounded-md opacity-0 group-hover:opacity-100 transition-opacity whitespace-nowrap pointer-events-none font-geist-mono shadow-md">
+        Início
+      </span>
+    </a>
+
+    <a 
+      href="#about" 
+      class="group grid place-items-center text-slate-400 hover:text-bahia-blue hover:bg-bahia-blue-50 transition relative w-10 h-10 rounded-full"
+      title="Sobre"
+    >
+      <User class="w-4 h-4 transition-transform group-hover:scale-110" />
+      <span class="absolute left-14 bg-slate-900 text-white text-xs px-2.5 py-1 rounded-md opacity-0 group-hover:opacity-100 transition-opacity whitespace-nowrap pointer-events-none font-geist-mono shadow-md">
+        Sobre
+      </span>
+    </a>
+
+    <a 
+      href="#services" 
+      class="group grid place-items-center text-slate-400 hover:text-bahia-indigo hover:bg-bahia-indigo-50 transition relative w-10 h-10 rounded-full"
+      title="Habilidades"
+    >
+      <div class="w-2 h-2 rounded-full bg-bahia-indigo"></div>
+      <span class="absolute left-14 bg-slate-900 text-white text-xs px-2.5 py-1 rounded-md opacity-0 group-hover:opacity-100 transition-opacity whitespace-nowrap pointer-events-none font-geist-mono shadow-md">
+        Habilidades
+      </span>
+    </a>
+
+    <a 
+      href="#work" 
+      class="group grid place-items-center text-slate-400 hover:text-bahia-teal hover:bg-bahia-teal-50 transition relative w-10 h-10 rounded-full"
+      title="Projetos"
+    >
+      <Briefcase class="w-4 h-4 transition-transform group-hover:scale-110" />
+      <span class="absolute left-14 bg-slate-900 text-white text-xs px-2.5 py-1 rounded-md opacity-0 group-hover:opacity-100 transition-opacity whitespace-nowrap pointer-events-none font-geist-mono shadow-md">
+        Projetos
+      </span>
+    </a>
+
+    <a 
+      href="#contact" 
+      class="group grid place-items-center text-slate-400 hover:text-bahia-red hover:bg-bahia-red-50 transition relative w-10 h-10 rounded-full"
+      title="Contato"
+    >
+      <Mail class="w-4 h-4 transition-transform group-hover:scale-110" />
+      <span class="absolute left-14 bg-slate-900 text-white text-xs px-2.5 py-1 rounded-md opacity-0 group-hover:opacity-100 transition-opacity whitespace-nowrap pointer-events-none font-geist-mono shadow-md">
+        Contato
+      </span>
+    </a>
+  </div>
+</aside>

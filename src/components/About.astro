@@ -1,0 +1,107 @@
+---
+import { ArrowDownRight } from 'lucide-astro';
+---
+
+<section id="about" class="sm:px-8 px-6 pt-24 pb-20 border-t border-slate-100 bg-white">
+  <div class="max-w-6xl mx-auto">
+    <div class="grid grid-cols-1 lg:grid-cols-12 gap-10 lg:gap-16 items-center">
+      <!-- Image Column -->
+      <div class="lg:col-span-5">
+        <div class="relative overflow-hidden bg-slate-100 rounded-2xl aspect-[4/5] shadow-xl shadow-slate-100 group">
+          <div class="absolute inset-0 bg-gradient-to-tr from-bahia-blue/20 via-transparent to-bahia-cyan/20 opacity-0 group-hover:opacity-100 transition-opacity duration-500 z-10 pointer-events-none"></div>
+          <img 
+            alt="Retrato profissional" 
+            class="w-full h-full object-cover grayscale group-hover:grayscale-0 transition-all duration-700 scale-100 group-hover:scale-105" 
+            src="/assets/images/portrait.png"
+          />
+          <div class="absolute bottom-4 left-4 right-4 z-20 bg-white/90 backdrop-blur-md rounded-xl p-3 border border-white/50 shadow-sm flex items-center justify-between">
+            <span class="text-xs font-semibold text-slate-800 font-geist-mono">EGBA · Inovação</span>
+            <span class="inline-flex items-center gap-1 text-[11px] font-bold text-bahia-cyan font-geist-mono">
+              <span class="w-1.5 h-1.5 rounded-full bg-bahia-cyan"></span> Disponível
+            </span>
+          </div>
+        </div>
+      </div>
+
+      <!-- Text Column -->
+      <div class="lg:col-span-7">
+        <div class="flex flex-col justify-center h-full">
+          <div class="flex items-center gap-3 mb-6">
+            <ArrowDownRight class="w-4 h-4 text-bahia-cyan" />
+            <div class="h-0.5 flex-1 bg-gradient-to-r from-bahia-cyan via-bahia-indigo to-bahia-red opacity-70"></div>
+          </div>
+
+          <div class="inline-flex items-center gap-2 mb-3">
+            <span class="text-xs font-bold uppercase tracking-widest text-bahia-blue font-geist-mono">
+              Perfil &amp; Trajetória
+            </span>
+          </div>
+
+          <h2 class="text-3xl md:text-4xl font-semibold text-slate-900 mb-6 tracking-tight">
+            Product Designer &amp; Design Systems
+          </h2>
+
+          <p class="text-base md:text-lg leading-relaxed text-slate-600 mb-8 font-geist-mono">
+            Especialista em design de produtos e arquitetura de design systems com 9 anos de experiência. Foco em interfaces públicas e privadas escaláveis — integrando tokens de design, componentes reutilizáveis, acessibilidade e inteligência artificial para entregar consistência, agilidade e excelência visual.
+          </p>
+
+          <div class="grid grid-cols-2 gap-6 mb-10 p-6 rounded-2xl bg-slate-50 border border-slate-100">
+            <div class="space-y-3">
+              <h3 class="text-xs font-bold text-slate-900 font-geist-mono uppercase tracking-wider flex items-center gap-2">
+                <span class="w-1.5 h-1.5 rounded-full bg-bahia-cyan"></span>
+                HABILIDADES
+              </h3>
+              <ul class="text-sm text-slate-600 space-y-2">
+                <li class="font-geist-mono flex items-center gap-2">
+                  <span class="text-bahia-cyan font-bold">•</span> UI/UX Design
+                </li>
+                <li class="font-geist-mono flex items-center gap-2">
+                  <span class="text-bahia-indigo font-bold">•</span> UX/AI &amp; Automação
+                </li>
+                <li class="font-geist-mono flex items-center gap-2">
+                  <span class="text-bahia-blue font-bold">•</span> Design Systems
+                </li>
+              </ul>
+            </div>
+
+            <div class="space-y-3">
+              <h3 class="text-xs font-bold text-slate-900 font-geist-mono uppercase tracking-wider flex items-center gap-2">
+                <span class="w-1.5 h-1.5 rounded-full bg-bahia-red"></span>
+                INDÚSTRIAS
+              </h3>
+              <ul class="text-sm text-slate-600 space-y-2">
+                <li class="font-geist-mono flex items-center gap-2">
+                  <span class="text-bahia-red font-bold">•</span> Setor Governamental
+                </li>
+                <li class="font-geist-mono flex items-center gap-2">
+                  <span class="text-bahia-magenta font-bold">•</span> Seguros &amp; Finanças
+                </li>
+                <li class="font-geist-mono flex items-center gap-2">
+                  <span class="text-bahia-teal font-bold">•</span> Soluções Enterprise
+                </li>
+              </ul>
+            </div>
+          </div>
+
+          <div class="flex flex-wrap gap-4">
+            <a 
+              class="px-7 py-3.5 rounded-xl bg-slate-950 text-white font-medium hover:bg-bahia-blue transition-all duration-300 font-geist-mono text-sm shadow-md hover:shadow-lg shadow-slate-900/10 flex items-center gap-2" 
+              href="#work"
+            >
+              <span>Ver portfólio</span>
+              <span class="text-bahia-cyan">→</span>
+            </a>
+            <a 
+              class="px-7 py-3.5 rounded-xl border border-slate-200 text-slate-900 font-medium hover:bg-bahia-cyan-50 hover:border-bahia-cyan hover:text-bahia-cyan-700 transition-all duration-300 font-geist-mono text-sm" 
+              href="https://api.whatsapp.com/send/?phone=5521972139499&text=Ola!+Gostaria+de+conversar+sobre+projetos&type=phone_number&app_absent=0"
+              target="_blank" 
+              rel="noopener noreferrer"
+            >
+              Falar no WhatsApp
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>

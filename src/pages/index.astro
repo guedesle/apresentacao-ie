@@ -1,0 +1,30 @@
+---
+import Layout from '../layouts/Layout.astro';
+import Hero3D from '../components/Hero3D.astro';
+import SideNav from '../components/SideNav.astro';
+import About from '../components/About.astro';
+import Services from '../components/Services.astro';
+import Projects from '../components/Projects.astro';
+import Testimonial from '../components/Testimonial.astro';
+import Footer from '../components/Footer.astro';
+---
+
+<Layout 
+  title="EGBA · Governo da Bahia — Inovação & Design System"
+  description="Apresentação institucional e portfólio com foco em Design Systems, produtos digitais governamentais escaláveis e tecnologia moderna."
+>
+  <!-- Floating Side Navigation -->
+  <SideNav />
+
+  <!-- 3D Hero Section -->
+  <Hero3D />
+
+  <!-- Main Content Flow -->
+  <main id="main-content" class="relative z-20 bg-white">
+    <About />
+    <Services />
+    <Projects />
+    <Testimonial />
+    <Footer />
+  </main>
+</Layout>

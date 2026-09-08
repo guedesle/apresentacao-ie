@@ -1,0 +1,51 @@
+---
+// Footer.astro
+---
+
+<footer id="contact" class="bg-white border-t border-slate-200/80 px-6 sm:px-8">
+  <div class="mx-auto max-w-6xl py-14 md:py-20">
+    <div class="grid grid-cols-1 md:grid-cols-2 gap-10 justify-between items-center">
+      <div class="space-y-3">
+        <div class="flex items-center gap-3">
+          <img src="/bagov.png" alt="Governo da Bahia" class="h-6 w-auto object-contain" />
+          <div class="h-4 w-px bg-slate-200"></div>
+          <span class="font-bold text-lg tracking-tight text-slate-900 font-geist-mono">
+            EGBA <span class="text-bahia-red">·</span> Inovação &amp; Design
+          </span>
+        </div>
+        <p class="text-slate-500 text-xs md:text-sm font-geist-mono">
+          Governo do Estado da Bahia — Empresa Gráfica da Bahia. © 2026 Todos os direitos reservados.
+        </p>
+      </div>
+
+      <div class="flex flex-col md:flex-row gap-6 md:justify-end items-start md:items-center text-sm font-medium text-slate-600">
+        <div class="flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-bahia-cyan-50 text-bahia-blue-700 border border-bahia-cyan-100 text-xs font-geist-mono">
+          <span class="relative flex h-2 w-2">
+            <span class="animate-ping absolute inline-flex h-full w-full rounded-full bg-bahia-cyan opacity-75"></span>
+            <span class="relative inline-flex rounded-full h-2 w-2 bg-bahia-cyan"></span>
+          </span>
+          Pronto para novos desafios
+        </div>
+
+        <nav class="flex gap-6 font-geist-mono text-xs uppercase tracking-wider">
+          <a 
+            class="hover:text-bahia-cyan transition-colors" 
+            href="https://www.linkedin.com/in/jonathan-fernandes-a8208410a/" 
+            target="_blank" 
+            rel="noopener noreferrer"
+          >
+            LinkedIn
+          </a>
+          <a 
+            class="hover:text-bahia-cyan transition-colors" 
+            href="https://api.whatsapp.com/send/?phone=5521972139499&text=Ola!+Vi+a+apresentacao+e+gostaria+de+conversar&type=phone_number&app_absent=0" 
+            target="_blank" 
+            rel="noopener noreferrer"
+          >
+            WhatsApp
+          </a>
+        </nav>
+      </div>
+    </div>
+  </div>
+</footer>
