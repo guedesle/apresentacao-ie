@@ -1,12 +1,12 @@
 ---
 import PitchLayout from '../../layouts/PitchLayout.astro';
-import Flow from '../../components/Flow.astro';
+import OperatingModelVisual from '../../components/pitch/OperatingModelVisual.astro';
 ---
-<PitchLayout index={3} title="Antes e depois">
-  <div>
-    <p class="eyebrow">ANTES × DEPOIS</p>
-    <h1>De executar a medição<br />a supervisionar exceções.</h1>
-    <div class="compare pitch-compare"><article class="compare-panel"><span>ANTES</span><h3>Pessoas executam.</h3><Flow compact items={['Edição digital','Impressão','Medição humana','Lançamento','Faturamento']} /></article><article class="compare-panel compare-accent"><span>DEPOIS</span><h3>O sistema produz. Pessoas validam.</h3><Flow compact items={['Edição digital','Processamento','Medição automática','Responsabilização','Validação','Faturamento']} /></article></div>
-    <p class="pitch-closing">Não queremos apenas medir mais rápido. Queremos deixar de depender da medição humana para faturar.</p>
+<PitchLayout index={2} title="Mudança do modelo operacional">
+  <div class="pitch-refined-scene">
+    <p class="eyebrow">MUDANÇA DO MODELO OPERACIONAL</p>
+    <h1>Do processo manual<br />à supervisão por exceção.</h1>
+    <p class="pitch-lede pitch-lede-short">O sistema executa o fluxo regular; as equipes concentram-se em exceções, conferência e controle.</p>
+    <OperatingModelVisual />
   </div>
 </PitchLayout>
