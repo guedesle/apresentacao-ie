@@ -11,7 +11,15 @@ const next = index < pitchRoutes.length - 1 ? pitchRoutes[index + 1] : null;
 <Layout title={`${title} · Apresentação`} className="pitch-body">
   <main id="conteudo" class="pitch-shell" data-pitch-index={index} data-pitch-total={pitchRoutes.length} data-prev={previous ?? ''} data-next={next ?? ''}>
     <header class="pitch-header">
-      <a class="pitch-brand" href="/">egba. <span>Diário Oficial</span></a>
+      <a class="pitch-brand" href="/" aria-label="EGBA · Diário Oficial · início">
+        <img
+          class="brand-logo-egba brand-logo-egba--pitch"
+          src="https://www.ba.gov.br/egba/sites/site-egba/files/2025-06/EGBA_NOVA_MARCA_PNG.png"
+          alt="EGBA - Empresa Gráfica da Bahia"
+          decoding="async"
+        />
+        <span>Diário Oficial</span>
+      </a>
       <div class="pitch-progress"><span style={`width:${((index + 1) / pitchRoutes.length) * 100}%`}></span></div>
       <div class="pitch-count">{String(index + 1).padStart(2,'0')} / {String(pitchRoutes.length).padStart(2,'0')}</div>
     </header>

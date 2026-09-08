@@ -2,19 +2,47 @@
 import { siteMeta } from '../data/content';
 ---
 <footer class="site-footer">
-  <div class="shell footer-grid">
-    <div>
-      <strong class="footer-brand">egba.</strong>
-      <p>Empresa Gráfica da Bahia<br />Diário Oficial · Casa Civil</p>
+  <div class="shell">
+    <div class="institutional-brands" aria-label="Marcas institucionais">
+      <div class="institutional-brand-item institutional-brand-government" aria-label="Governo do Estado da Bahia">
+        <img src="/images/bagov.png" alt="Governo do Estado da Bahia" loading="lazy" decoding="async" />
+      </div>
+
+      <div class="institutional-brand-item institutional-wordmark institutional-brand-casa-civil" aria-label="Casa Civil">
+        <small>Governo do Estado da Bahia</small>
+        <strong>CASA CIVIL</strong>
+      </div>
+
+      <div class="institutional-brand-item institutional-brand-egba" aria-label="EGBA">
+        <img
+          class="brand-logo-egba brand-logo-egba--footer"
+          src="https://www.ba.gov.br/egba/sites/site-egba/files/2025-06/EGBA_NOVA_MARCA_PNG.png"
+          alt="EGBA"
+          loading="lazy"
+          decoding="async"
+        />
+      </div>
+
+      <div class="institutional-brand-item institutional-wordmark institutional-brand-doe" aria-label="Diário Oficial do Estado da Bahia">
+        <strong>DIÁRIO OFICIAL</strong>
+        <small>República Federativa do Brasil · Estado da Bahia</small>
+      </div>
     </div>
-    <div>
-      <p><strong>Automação e modernização do faturamento</strong></p>
-      <p>Projeto Inteligência Editorial<br />Gerência do Diário Oficial + Gerência de Informática</p>
-    </div>
-    <div class="footer-links">
-      <a href="/ficha-tecnica/">Ficha técnica e fontes</a>
-      <a href="https://github.com/guedesle/apresentacao-ie" rel="noreferrer">Documentação do projeto ↗</a>
-      <small>© 2026 EGBA · Referência: {siteMeta.referenceDate}</small>
+
+    <div class="footer-grid">
+      <div>
+        <strong class="footer-brand">EGBA</strong>
+        <p>Empresa Gráfica da Bahia<br />Diário Oficial · Casa Civil</p>
+      </div>
+      <div>
+        <p><strong>Automação e modernização do faturamento</strong></p>
+        <p>Projeto Inteligência Editorial<br />Gerência do Diário Oficial + Gerência de Informática</p>
+      </div>
+      <div class="footer-links">
+        <a href="/ficha-tecnica/">Ficha técnica e fontes</a>
+        <a href="https://github.com/guedesle/apresentacao-ie" rel="noreferrer">Documentação do projeto ↗</a>
+        <small>© 2026 EGBA · Referência: {siteMeta.referenceDate}</small>
+      </div>
     </div>
   </div>
 </footer>

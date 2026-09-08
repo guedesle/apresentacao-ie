@@ -1,0 +1,143 @@
+.brand-logo-egba {
+  display: block;
+  width: auto;
+  height: 36px;
+  max-width: 132px;
+  object-fit: contain;
+  object-position: left center;
+}
+
+.brand-logo-egba--pitch {
+  height: 30px;
+  max-width: 112px;
+}
+
+.brand-logo-egba--footer {
+  height: 54px;
+  max-width: 150px;
+}
+
+.institutional-brands {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  align-items: stretch;
+  margin-bottom: 2.75rem;
+  overflow: hidden;
+  background: #fff;
+  border: 1px solid rgba(221, 238, 242, .75);
+  border-radius: 18px;
+}
+
+.institutional-brand-item {
+  min-width: 0;
+  min-height: 112px;
+  padding: 1.2rem 1.35rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--bahia-dark);
+  text-align: center;
+}
+
+.institutional-brand-item + .institutional-brand-item {
+  border-left: 1px solid #DDEEF2;
+}
+
+.institutional-brand-item img {
+  display: block;
+  width: auto;
+  max-width: 100%;
+  object-fit: contain;
+}
+
+.institutional-brand-government img {
+  height: 68px;
+}
+
+.institutional-wordmark {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  line-height: 1;
+}
+
+.institutional-wordmark small {
+  display: block;
+  margin: 0 0 .45rem;
+  color: #416573;
+  font-size: .56rem;
+  font-weight: 750;
+  letter-spacing: .12em;
+  text-transform: uppercase;
+}
+
+.institutional-wordmark strong {
+  display: block;
+  color: var(--bahia-dark);
+  font-size: clamp(1rem, 1.5vw, 1.35rem);
+  font-weight: 850;
+  letter-spacing: -.025em;
+}
+
+.institutional-brand-doe strong {
+  font-family: Georgia, "Times New Roman", serif;
+  font-size: clamp(1.3rem, 2vw, 1.75rem);
+  letter-spacing: -.035em;
+}
+
+.institutional-brand-doe small {
+  margin: .45rem 0 0;
+  font-size: .52rem;
+  letter-spacing: .05em;
+  text-transform: none;
+}
+
+.pitch-brand {
+  display: inline-flex;
+  align-items: center;
+  gap: .7rem;
+}
+
+.pitch-brand:hover {
+  text-decoration: none;
+}
+
+@media (max-width: 900px) {
+  .institutional-brands {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  .institutional-brand-item:nth-child(3) {
+    border-left: 0;
+  }
+
+  .institutional-brand-item:nth-child(n+3) {
+    border-top: 1px solid #DDEEF2;
+  }
+}
+
+@media (max-width: 560px) {
+  .brand-logo-egba {
+    height: 31px;
+    max-width: 112px;
+  }
+
+  .brand-logo-egba--pitch {
+    height: 27px;
+    max-width: 96px;
+  }
+
+  .institutional-brands {
+    grid-template-columns: 1fr;
+  }
+
+  .institutional-brand-item {
+    min-height: 94px;
+  }
+
+  .institutional-brand-item + .institutional-brand-item {
+    border-left: 0;
+    border-top: 1px solid #DDEEF2;
+  }
+}
