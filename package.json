@@ -8,7 +8,8 @@
     "build": "astro build",
     "preview": "astro preview",
     "astro": "astro",
-    "test:palette": "node --test tests/palette.test.mjs"
+    "test:palette": "node --test tests/palette.test.mjs",
+    "test:brands": "node --test tests/brands.test.mjs"
   },
   "dependencies": {
     "@astrojs/tailwind": "^5.1.5",
